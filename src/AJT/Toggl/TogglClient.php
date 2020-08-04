@@ -86,7 +86,7 @@ class TogglClient extends GuzzleClient
             $clientConfig['debug'] = $config['debug'];
         }
 
-        if (isset($config['handler']) && is_bool($config['handler'])) {
+        if (isset($config['handler']) && $config['handler'] instanceof \GuzzleHttp\HandlerStack) {
             $clientConfig['handler'] = $config['handler'];
         }
 
